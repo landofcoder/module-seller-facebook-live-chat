@@ -26,7 +26,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getSellerfacebookId()
     {
-        return $this->_get(self::SELLERFACEBOOK_ID);
+        return $this->getData(self::SELLERFACEBOOK_ID);
     }
 
     /**
@@ -45,7 +45,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getLanguageCode()
     {
-        return $this->_get(self::LANGUAGE_CODE);
+        return $this->getData(self::LANGUAGE_CODE);
     }
 
     /**
@@ -64,7 +64,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getSellerId()
     {
-        return $this->_get(self::SELLER_ID);
+        return $this->getData(self::SELLER_ID);
     }
 
     /**
@@ -83,7 +83,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getPageId()
     {
-        return $this->_get(self::PAGE_ID);
+        return $this->getData(self::PAGE_ID);
     }
 
     /**
@@ -102,7 +102,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getLoggedInGreeting()
     {
-        return $this->_get(self::LOGGED_IN_GREETING);
+        return $this->getData(self::LOGGED_IN_GREETING);
     }
 
     /**
@@ -121,7 +121,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getLoggedOutGreeting()
     {
-        return $this->_get(self::LOGGED_OUT_GREETING);
+        return $this->getData(self::LOGGED_OUT_GREETING);
     }
 
     /**
@@ -140,7 +140,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getThemeColor()
     {
-        return $this->_get(self::THEME_COLOR);
+        return $this->getData(self::THEME_COLOR);
     }
 
     /**
@@ -159,7 +159,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getCreatedAt()
     {
-        return $this->_get(self::CREATED_AT);
+        return $this->getData(self::CREATED_AT);
     }
 
     /**
@@ -178,7 +178,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getUpdatedAt()
     {
-        return $this->_get(self::UPDATED_AT);
+        return $this->getData(self::UPDATED_AT);
     }
 
     /**
@@ -197,7 +197,7 @@ class Sellerfacebook extends \Magento\Framework\Model\AbstractModel implements S
      */
     public function getStatus()
     {
-        return $this->_get(self::STATUS);
+        return $this->getData(self::STATUS);
     }
 
     /**
