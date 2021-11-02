@@ -20,13 +20,22 @@ class Data extends AbstractHelper
     private $localeResolver;
 
     /**
+     * @var StoreManagerInterface
+     */
+    protected $storeManager;
+
+    /**
      * @param \Magento\Framework\App\Helper\Context $context
+     * @param StoreManagerInterface $storeManager
      * @param Resolver $localeResolver
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
+        StoreManagerInterface $storeManager,
         Resolver $localeResolver
     ) {
+        $this->localeResolver = $localeResolver;
+        $this->storeManager = $storeManager;
         parent::__construct($context);
     }
 
@@ -45,6 +54,8 @@ class Data extends AbstractHelper
     }
 
     /**
+     * is enable module
+     *
      * @return bool
      */
     public function isEnabled()
@@ -52,6 +63,21 @@ class Data extends AbstractHelper
         return (bool)$this->getConfigValue("lofmpfacebooklivechat/general/enabled");
     }
 
+    /**
+     * is allow seller manage feature
+     *
+     * @return bool
+     */
+    public function allowSellerManage()
+    {
+        return $this->isEnabled();
+    }
+
+    /**
+     * get locale code
+     *
+     * @return string
+     */
     public function getCurrentLocaleCode()
     {
         $currentLocaleCode = $this->localeResolver->getLocale();

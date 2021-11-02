@@ -49,7 +49,7 @@
 				<param name="enabled" xsi:type="boolean">true</param>
 				<param name="indexField" xsi:type="string">sellerfacebook_id</param>
 				<param name="clientConfig" xsi:type="array">
-					<item name="saveUrl" xsi:type="url" path="lofmp_facebooklivechat/Sellerfacebook/inlineEdit"/>
+					<item name="saveUrl" xsi:type="url" path="facebooklivechat/sellerfacebook/inlineEdit"/>
 					<item name="validateBeforeSave" xsi:type="boolean">false</item>
 				</param>
 			</editorConfig>

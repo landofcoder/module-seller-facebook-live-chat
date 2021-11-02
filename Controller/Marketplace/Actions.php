@@ -493,7 +493,6 @@ abstract class Actions extends \Magento\Framework\App\Action\Action
                     unset($params[$idFieldName]);
                 }
                 $model->addData($params);
-
                 $this->_beforeSave($model, $request);
                 $model->save();
                 $this->_afterSave($model, $request);

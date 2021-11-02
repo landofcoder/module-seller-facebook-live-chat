@@ -6,7 +6,7 @@
 <?php
 $facebooklive = $block->getFacebookInfo();
 if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
-    $helper = $this->helper("Lofmp\CouponCode\Helper\Data");
+    $helper = $this->helper("Lofmp\FacebookLiveChat\Helper\Data");
     $themeColor = $facebooklive->getThemeColor();
     $themeColor = $themeColor ? $block->escapeHtmlAttr($themeColor) : "#44bec7";
     $loggedInGreeting = $facebooklive->getLoggedInGreeting();
@@ -37,9 +37,9 @@ if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
     <!-- Your customer chat code -->
     <div class="fb-customerchat"
     attribution=setup_tool
-    page_id="<?= $block->escapeHtmlAttr($facebooklive->getPageId()); ?>"
+    page_id="<?= $block->escapeUrl($facebooklive->getPageId()); ?>"
     theme_color="<?= $themeColor; ?>"
-    logged_in_greeting="<?= $block->escapeHtmlAttr($loggedInGreeting); ?>"
-    logged_out_greeting="<?= $block->escapeHtmlAttr($loggedOutGreeting); ?>">
+    logged_in_greeting="<?= $block->escapeUrl($loggedInGreeting); ?>"
+    logged_out_greeting="<?= $block->escapeUrl($loggedOutGreeting); ?>">
     </div>
 <?php endif; ?>

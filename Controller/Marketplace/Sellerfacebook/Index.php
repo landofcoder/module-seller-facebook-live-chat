@@ -21,7 +21,7 @@
 
 namespace Lofmp\FacebookLiveChat\Controller\Marketplace\Sellerfacebook;
 
-class Index extends \Lofmp\FacebookLiveChat\Controller\Marketplace\Sellerfacebook
+class Index extends Edit
 {
 
 }

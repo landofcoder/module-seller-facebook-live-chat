@@ -36,7 +36,7 @@ class Edit extends \Lofmp\FacebookLiveChat\Controller\Adminhtml\Sellerfacebook
         // 1. Get ID and create model
         $id = $this->getRequest()->getParam('sellerfacebook_id');
         $model = $this->_objectManager->create(\Lofmp\FacebookLiveChat\Model\Sellerfacebook::class);
-
+die($id);
         // 2. Initial checking
         if ($id) {
             $model->load($id);

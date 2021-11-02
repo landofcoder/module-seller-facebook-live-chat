@@ -9,6 +9,7 @@ namespace Lofmp\FacebookLiveChat\Model\Sellerfacebook;
 
 use Lofmp\FacebookLiveChat\Model\ResourceModel\Sellerfacebook\CollectionFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
+use Magento\Framework\Registry;
 
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
@@ -18,6 +19,10 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
     protected $loadedData;
     protected $dataPersistor;
 
+    /**
+     * @var Registry
+     */
+    protected $coreRegistry;
 
     /**
      * Constructor
@@ -27,6 +32,7 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      * @param string $requestFieldName
      * @param CollectionFactory $collectionFactory
      * @param DataPersistorInterface $dataPersistor
+     * @param Registry $coreRegistry
      * @param array $meta
      * @param array $data
      */
@@ -36,11 +42,13 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         $requestFieldName,
         CollectionFactory $collectionFactory,
         DataPersistorInterface $dataPersistor,
+        Registry $coreRegistry,
         array $meta = [],
         array $data = []
     ) {
         $this->collection = $collectionFactory->create();
         $this->dataPersistor = $dataPersistor;
+        $this->coreRegistry = $coreRegistry;
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
     }
 
