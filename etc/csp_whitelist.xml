@@ -7,5 +7,15 @@
                 <value id="lofmp-facebook-live-chat" type="host">*.facebook.com</value>
             </values>
         </policy>
+        <policy id="frame-src">
+            <values>
+                <value id="lofmp-facebook-live-chat-frameall" type="host">*.facebook.com</value>
+            </values>
+        </policy>
+        <policy id="frame-src">
+            <values>
+                <value id="lofmp-facebook-live-chat-frame" type="host">https://www.facebook.com</value>
+            </values>
+        </policy>
     </policies>
 </csp_whitelist>
