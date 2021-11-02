@@ -8,7 +8,7 @@ $facebooklive = $block->getFacebookInfo();
 if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
     $helper = $this->helper("Lofmp\FacebookLiveChat\Helper\Data");
     $themeColor = $facebooklive->getThemeColor();
-    $themeColor = $themeColor ? $block->escapeHtmlAttr($themeColor) : "#44bec7";
+    $themeColor = $themeColor ? $block->escapeUrl($themeColor) : "#44bec7";
     $loggedInGreeting = $facebooklive->getLoggedInGreeting();
     $loggedInGreeting = $loggedInGreeting ? $loggedInGreeting : __("Hello! Welcome to our shop");
     $loggedOutGreeting = $facebooklive->getLoggedOutGreeting();
