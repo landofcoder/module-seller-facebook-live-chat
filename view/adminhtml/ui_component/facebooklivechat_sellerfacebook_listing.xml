@@ -2,13 +2,13 @@
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
 	<argument name="data" xsi:type="array">
 		<item name="js_config" xsi:type="array">
-			<item name="provider" xsi:type="string">lofmp_facebooklivechat_sellerfacebook_listing.lofmp_facebooklivechat_sellerfacebook_listing_data_source</item>
+			<item name="provider" xsi:type="string">facebooklivechat_sellerfacebook_listing.facebooklivechat_sellerfacebook_listing_data_source</item>
 		</item>
 	</argument>
 	<settings>
 		<spinner>lofmp_facebooklivechat_sellerfacebook_columns</spinner>
 		<deps>
-			<dep>lofmp_facebooklivechat_sellerfacebook_listing.lofmp_facebooklivechat_sellerfacebook_listing_data_source</dep>
+			<dep>facebooklivechat_sellerfacebook_listing.facebooklivechat_sellerfacebook_listing_data_source</dep>
 		</deps>
 		<buttons>
 			<button name="add">
@@ -18,7 +18,7 @@
 			</button>
 		</buttons>
 	</settings>
-	<dataSource name="lofmp_facebooklivechat_sellerfacebook_listing_data_source" component="Magento_Ui/js/grid/provider">
+	<dataSource name="facebooklivechat_sellerfacebook_listing_data_source" component="Magento_Ui/js/grid/provider">
 		<settings>
 			<storageConfig>
 				<param name="indexField" xsi:type="string">sellerfacebook_id</param>
@@ -26,7 +26,7 @@
 			<updateUrl path="mui/index/render"/>
 		</settings>
 		<aclResource>Lofmp_FacebookLiveChat::Sellerfacebook</aclResource>
-		<dataProvider name="lofmp_facebooklivechat_sellerfacebook_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+		<dataProvider name="facebooklivechat_sellerfacebook_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
 			<settings>
 				<requestFieldName>id</requestFieldName>
 				<primaryFieldName>sellerfacebook_id</primaryFieldName>
@@ -45,7 +45,7 @@
 	<columns name="lofmp_facebooklivechat_sellerfacebook_columns">
 		<settings>
 			<editorConfig>
-				<param name="selectProvider" xsi:type="string">lofmp_facebooklivechat_sellerfacebook_listing.lofmp_facebooklivechat_sellerfacebook_listing.lofmp_facebooklivechat_sellerfacebook_columns.ids</param>
+				<param name="selectProvider" xsi:type="string">facebooklivechat_sellerfacebook_listing.facebooklivechat_sellerfacebook_listing.lofmp_facebooklivechat_sellerfacebook_columns.ids</param>
 				<param name="enabled" xsi:type="boolean">true</param>
 				<param name="indexField" xsi:type="string">sellerfacebook_id</param>
 				<param name="clientConfig" xsi:type="array">
@@ -55,7 +55,7 @@
 			</editorConfig>
 			<childDefaults>
 				<param name="fieldAction" xsi:type="array">
-					<item name="provider" xsi:type="string">lofmp_facebooklivechat_sellerfacebook_listing.lofmp_facebooklivechat_sellerfacebook_listing.lofmp_facebooklivechat_sellerfacebook_columns_editor</item>
+					<item name="provider" xsi:type="string">facebooklivechat_sellerfacebook_listing.facebooklivechat_sellerfacebook_listing.lofmp_facebooklivechat_sellerfacebook_columns_editor</item>
 					<item name="target" xsi:type="string">startEdit</item>
 					<item name="params" xsi:type="array">
 						<item name="0" xsi:type="string">${ $.$data.rowIndex }</item>

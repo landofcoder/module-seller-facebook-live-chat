@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2021 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add
+			id="Lofmp_FacebookLiveChat::facebook"
+			title="Facebook Live Chat"
+			module="Lofmp_FacebookLiveChat"
+			sortOrder="280"
+			icon="fa fa-commenting-o"
+			resource="Lofmp_FacebookLiveChat::Sellerfacebook"
+			dependsOnConfig="lofmpfacebooklivechat/general/enabled"
+        />
+    	<add
+			id="Lofmp_FacebookLiveChat::chat"
+			title="Facebook Chat"
+			module="Lofmp_FacebookLiveChat"
+			action="lofmpfacebooklivechat/sellerfacebook/index"
+			sortOrder="10"
+			resource="Lofmp_FacebookLiveChat::Sellerfacebook"
+			parent="Lofmp_FacebookLiveChat::facebook"
+			dependsOnConfig="lofmpfacebooklivechat/general/enabled"
+        />
+    </menu>
+</config>

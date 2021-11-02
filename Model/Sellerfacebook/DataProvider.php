@@ -58,15 +58,21 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         foreach ($items as $model) {
             $this->loadedData[$model->getId()] = $model->getData();
         }
+
+        $currentModel = $this->coreRegistry->registry('current_model');
+        if ($currentModel && $currentModel->getId()) {
+            $this->loadedData[$currentModel->getId()] = $currentModel->getData();
+        }
+
         $data = $this->dataPersistor->get('lofmp_facebooklivechat_sellerfacebook');
-        
+
         if (!empty($data)) {
             $model = $this->collection->getNewEmptyItem();
             $model->setData($data);
             $this->loadedData[$model->getId()] = $model->getData();
             $this->dataPersistor->clear('lofmp_facebooklivechat_sellerfacebook');
         }
-        
+
         return $this->loadedData;
     }
 }

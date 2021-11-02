@@ -2,7 +2,7 @@
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
 	<argument name="data" xsi:type="array">
 		<item name="js_config" xsi:type="array">
-			<item name="provider" xsi:type="string">lofmp_facebooklivechat_sellerfacebook_form.sellerfacebook_form_data_source</item>
+			<item name="provider" xsi:type="string">lofmpfacebooklivechat_sellerfacebook_form.sellerfacebook_form_data_source</item>
 		</item>
 		<item name="label" xsi:type="string" translate="true">General Information</item>
 		<item name="template" xsi:type="string">templates/form/collapsible</item>
@@ -14,10 +14,10 @@
 			<button name="save" class="Lofmp\FacebookLiveChat\Block\Adminhtml\Sellerfacebook\Edit\SaveButton"/>
 			<button name="save_and_continue" class="Lofmp\FacebookLiveChat\Block\Adminhtml\Sellerfacebook\Edit\SaveAndContinueButton"/>
 		</buttons>
-		<namespace>lofmp_facebooklivechat_sellerfacebook_form</namespace>
+		<namespace>lofmpfacebooklivechat_sellerfacebook_form</namespace>
 		<dataScope>data</dataScope>
 		<deps>
-			<dep>lofmp_facebooklivechat_sellerfacebook_form.sellerfacebook_form_data_source</dep>
+			<dep>lofmpfacebooklivechat_sellerfacebook_form.sellerfacebook_form_data_source</dep>
 		</deps>
 	</settings>
 	<dataSource name="sellerfacebook_form_data_source">
@@ -27,7 +27,7 @@
 			</item>
 		</argument>
 		<settings>
-			<submitUrl path="*/*/save"/>
+			<submitUrl path="lofmpfacebooklivechat/sellerfacebook/save"/>
 		</settings>
 		<dataProvider name="sellerfacebook_form_data_source" class="Lofmp\FacebookLiveChat\Model\Sellerfacebook\DataProvider">
 			<settings>
@@ -40,21 +40,6 @@
 		<settings>
 			<label>General</label>
 		</settings>
-		<field name="seller_id" formElement="input" sortOrder="10">
-			<argument name="data" xsi:type="array">
-				<item name="config" xsi:type="array">
-					<item name="source" xsi:type="string">Sellerfacebook</item>
-				</item>
-			</argument>
-			<settings>
-				<dataType>text</dataType>
-				<label translate="true">Seller Id</label>
-				<dataScope>seller_id</dataScope>
-				<validation>
-					<rule name="required-entry" xsi:type="boolean">false</rule>
-				</validation>
-			</settings>
-		</field>
 		<field name="page_id" formElement="input" sortOrder="20">
 			<argument name="data" xsi:type="array">
 				<item name="config" xsi:type="array">
