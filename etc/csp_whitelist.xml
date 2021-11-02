@@ -7,6 +7,26 @@
                 <value id="lofmp-facebook-live-chat" type="host">*.facebook.com</value>
             </values>
         </policy>
+        <policy id="object-src">
+            <values>
+                <value id="lofmp-facebook-live-chatobject" type="host">*.facebook.com</value>
+            </values>
+        </policy>
+        <policy id="img-src">
+            <values>
+                <value id="lofmp-facebook-live-chatimg" type="host">*.facebook.com</value>
+            </values>
+        </policy>
+        <policy id="connect-src">
+            <values>
+                <value id="lofmp-facebook-live-chatconnect" type="host">*.facebook.com</value>
+            </values>
+        </policy>
+        <policy id="style-src">
+            <values>
+                <value id="lofmp-facebook-live-chatstyle" type="host">*.facebook.com</value>
+            </values>
+        </policy>
         <policy id="frame-src">
             <values>
                 <value id="lofmp-facebook-live-chat-frameall" type="host">*.facebook.com</value>
