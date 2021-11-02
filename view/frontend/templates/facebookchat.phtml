@@ -25,8 +25,8 @@ if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
     var chatbox = document.getElementById('fb-customer-chat');
     chatbox.setAttribute("page_id", "<?= $block->escapeUrl($facebooklive->getPageId()); ?>");
     chatbox.setAttribute("attribution", "biz_inbox");
-    chatbox.setAttribute("logged_in_greeting", "<?= $block->escapeHtmlAttr($loggedInGreeting); ?>");
-    chatbox.setAttribute("logged_out_greeting", "<?= $block->escapeHtmlAttr($loggedOutGreeting); ?>");
+    chatbox.setAttribute("logged_in_greeting", "<?= $block->escapeUrl($loggedInGreeting); ?>");
+    chatbox.setAttribute("logged_out_greeting", "<?= $block->escapeUrl($loggedOutGreeting); ?>");
     chatbox.setAttribute("theme_color", "<?= $themeColor; ?>");
 
     window.fbAsyncInit = function() {
