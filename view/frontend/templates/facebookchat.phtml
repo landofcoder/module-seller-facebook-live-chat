@@ -18,11 +18,21 @@ if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
 ?>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
-    <script>
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "<?= $block->escapeUrl($facebooklive->getPageId()); ?>");
+    chatbox.setAttribute("attribution", "biz_inbox");
+    chatbox.setAttribute("logged_in_greeting", "<?= $block->escapeHtmlAttr($loggedInGreeting); ?>");
+    chatbox.setAttribute("logged_out_greeting", "<?= $block->escapeHtmlAttr($loggedOutGreeting); ?>");
+    chatbox.setAttribute("theme_color", "<?= $themeColor; ?>");
+
     window.fbAsyncInit = function() {
         FB.init({
         xfbml            : true,
-        version          : 'v5.0'
+        version          : 'v12.0'
         });
     };
 
@@ -33,13 +43,4 @@ if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
     js.src = 'https://connect.facebook.net/<?= $block->escapeHtmlAttr($languageCode); ?>/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat"
-    attribution=setup_tool
-    page_id="<?= $block->escapeUrl($facebooklive->getPageId()); ?>"
-    theme_color="<?= $themeColor; ?>"
-    logged_in_greeting="<?= $block->escapeUrl($loggedInGreeting); ?>"
-    logged_out_greeting="<?= $block->escapeUrl($loggedOutGreeting); ?>">
-    </div>
 <?php endif; ?>
