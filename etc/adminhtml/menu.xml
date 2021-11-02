@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+        <add
+            id="Lofmp_FacebookLiveChat::top_level"
+            title="Seller Facebook Live Chat"
+            module="Lofmp_FacebookLiveChat"
+            sortOrder="100"
+            parent="Lof_MarketPlace::marketplace"
+            resource="Lofmp_FacebookLiveChat::Sellerfacebook"/>
+		<add
+            id="Lofmp_FacebookLiveChat::facebooklivechat"
+            title="Sellerfacebook"
+            module="Lofmp_FacebookLiveChat"
+            sortOrder="9999"
+            resource="Lofmp_FacebookLiveChat::Sellerfacebook"
+            parent="Lofmp_FacebookLiveChat::top_level"
+            action="facebooklivechat/sellerfacebook/index"/>
+	</menu>
+</config>

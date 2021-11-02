@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="lofmp_facebooklivechat_sellerfacebook" resource="default" engine="innodb" comment="lofmp_facebooklivechat_sellerfacebook Table">
+		<column xsi:type="int" name="sellerfacebook_id" padding="11" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="sellerfacebook_id"/>
+		</constraint>
+		<column name="seller_id" nullable="false" xsi:type="int" comment="seller_id" identity="false" unsigned="true"/>
+		<column name="page_id" nullable="false" xsi:type="text" comment="page_id"/>
+        <column name="language_code" nullable="true" xsi:type="text" padding="10" comment="language_code"/>
+		<column name="logged_in_greeting" nullable="true" xsi:type="text" comment="logged_in_greeting"/>
+		<column name="logged_out_greeting" nullable="true" xsi:type="text" comment="logged_out_greeting"/>
+		<column name="theme_color" nullable="true" xsi:type="text" comment="theme_color"/>
+		<column name="created_at" nullable="true" xsi:type="timestamp" comment="created_at" default="CURRENT_TIMESTAMP"/>
+		<column name="updated_at" nullable="true" xsi:type="timestamp" comment="updated_at" default="CURRENT_TIMESTAMP" on_update="true"/>
+		<column name="status" nullable="true" xsi:type="smallint" comment="status" default="1" identity="false"/>
+
+        <constraint xsi:type="foreign" referenceId="FACEBOOKLIVECHAT_SELLER_ID_SELLER_ID" table="lofmp_facebooklivechat_sellerfacebook"
+                    column="seller_id" referenceTable="lof_marketplace_seller" referenceColumn="seller_id" onDelete="CASCADE"/>
+
+        <index referenceId="FACEBOOKLIVECHAT_SELLER_ID" indexType="btree">
+            <column name="seller_id"/>
+        </index>
+	</table>
+</schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/lofmp-facebooklivechat/sellerfacebook" method="POST">
+		<service class="Lofmp\FacebookLiveChat\Api\SellerfacebookRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Lofmp_FacebookLiveChat::Sellerfacebook_save"/>
+		</resources>
+	</route>
+	<route url="/V1/lofmp-facebooklivechat/sellerfacebook/search" method="GET">
+		<service class="Lofmp\FacebookLiveChat\Api\SellerfacebookRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Lofmp_FacebookLiveChat::Sellerfacebook_view"/>
+		</resources>
+	</route>
+	<route url="/V1/lofmp-facebooklivechat/sellerfacebook/:sellerfacebookId" method="GET">
+		<service class="Lofmp\FacebookLiveChat\Api\SellerfacebookRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Lofmp_FacebookLiveChat::Sellerfacebook_view"/>
+		</resources>
+	</route>
+    <route url="/V1/lofmp-facebooklivechat/sellerfacebook/seller/:sellerId" method="GET">
+		<service class="Lofmp\FacebookLiveChat\Api\SellerfacebookRepositoryInterface" method="getBySellerId"/>
+		<resources>
+			<resource ref="Lofmp_FacebookLiveChat::Sellerfacebook_view"/>
+		</resources>
+	</route>
+	<route url="/V1/lofmp-facebooklivechat/sellerfacebook/:sellerfacebookId" method="PUT">
+		<service class="Lofmp\FacebookLiveChat\Api\SellerfacebookRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Lofmp_FacebookLiveChat::Sellerfacebook_update"/>
+		</resources>
+	</route>
+	<route url="/V1/lofmp-facebooklivechat/sellerfacebook/:sellerfacebookId" method="DELETE">
+		<service class="Lofmp\FacebookLiveChat\Api\SellerfacebookRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Lofmp_FacebookLiveChat::Sellerfacebook_delete"/>
+		</resources>
+	</route>
+</routes>

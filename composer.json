@@ -1,0 +1,23 @@
+{
+    "name": "landofcoder/module-seller-facebooklivechat",
+    "description": "Magento 2 marketplace multi vendor facebook live chat for seller",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Landofcoder",
+            "email": "info@landofcoder.com",
+            "homepage": "https://landofcoder.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Lofmp\\FacebookLiveChat\\": ""
+        }
+    }
+}

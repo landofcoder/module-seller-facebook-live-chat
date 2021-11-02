@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Lofmp\FacebookLiveChat\Api\SellerfacebookRepositoryInterface" type="Lofmp\FacebookLiveChat\Model\SellerfacebookRepository"/>
+	<preference for="Lofmp\FacebookLiveChat\Api\Data\SellerfacebookInterface" type="Lofmp\FacebookLiveChat\Model\Data\Sellerfacebook"/>
+	<preference for="Lofmp\FacebookLiveChat\Api\Data\SellerfacebookSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Lofmp\FacebookLiveChat\Model\ResourceModel\Sellerfacebook\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">lofmp_facebooklivechat_sellerfacebook</argument>
+			<argument name="resourceModel" xsi:type="string">Lofmp\FacebookLiveChat\Model\ResourceModel\Sellerfacebook\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="lofmp_facebooklivechat_sellerfacebook_listing_data_source" xsi:type="string">Lofmp\FacebookLiveChat\Model\ResourceModel\Sellerfacebook\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

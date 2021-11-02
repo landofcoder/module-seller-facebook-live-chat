@@ -1,0 +1,15 @@
+
+type Query {
+
+    getSellerFacebookChat (
+        seller_id: Int @doc(description: "Query by seller_id.")
+    ) : GetSellerFacebookChat @resolver( class: "Lofmp\\FacebookLiveChat\\Model\\Resolver\\GetSellerFacebookChat") @doc(description: "Query by Query get seller facebook chat information.") @cache( cacheIdentity: "Lofmp\\FacebookLiveChat\\Model\\Resolver\\GetSellerFacebookChat\\Identity")
+}
+
+type GetSellerFacebookChat {
+    seller_id  : Int  @doc(description: "Query by seller_id.")
+    page_id  : String  @doc(description: "Query by page_id.")
+    logged_in_greeting  : String  @doc(description: "Query by logged_in_greeting.")
+    logged_out_greeting  : String  @doc(description: "Query by logged_out_greeting.")
+    theme_color  : String  @doc(description: "Query by theme_color.")
+}

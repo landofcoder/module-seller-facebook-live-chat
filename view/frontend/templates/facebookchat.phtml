@@ -1,0 +1,45 @@
+<?php
+/**
+ * @var $block \Lofmp\FacebookLiveChat\Block\FacebookChat
+ */
+?>
+<?php
+$facebooklive = $block->getFacebookInfo();
+if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
+    $helper = $this->helper("Lofmp\CouponCode\Helper\Data");
+    $themeColor = $facebooklive->getThemeColor();
+    $themeColor = $themeColor ? $block->escapeHtmlAttr($themeColor) : "#44bec7";
+    $loggedInGreeting = $facebooklive->getLoggedInGreeting();
+    $loggedInGreeting = $loggedInGreeting ? $loggedInGreeting : __("Hello! Welcome to our shop");
+    $loggedOutGreeting = $facebooklive->getLoggedOutGreeting();
+    $loggedOutGreeting = $loggedOutGreeting ? $loggedOutGreeting : __("Hello! Welcome to our shop");
+    $languageCode = $helper->getCurrentLocaleCode();
+    $languageCode = $languageCode ? trim($languageCode): "en_US";
+?>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+        xfbml            : true,
+        version          : 'v5.0'
+        });
+    };
+
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/<?= $block->escapeHtmlAttr($languageCode); ?>/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="<?= $block->escapeHtmlAttr($facebooklive->getPageId()); ?>"
+    theme_color="<?= $themeColor; ?>"
+    logged_in_greeting="<?= $block->escapeHtmlAttr($loggedInGreeting); ?>"
+    logged_out_greeting="<?= $block->escapeHtmlAttr($loggedOutGreeting); ?>">
+    </div>
+<?php endif; ?>
