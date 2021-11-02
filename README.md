@@ -11,6 +11,9 @@
 * Note: 
 This module is an addon for [Magento 2 Multi-Vendor Marketplace](https://landofcoder.com/magento-2-marketplace-extension.html/)
 
+## DEMO Addon
+[Check DEMO](https://magento2.landofcoder.com/index.php/seller/andyhoanghuu.html)
+
 ## Main Functionalities
 Magento 2 marketplace multi vendor facebook live chat for seller
 
