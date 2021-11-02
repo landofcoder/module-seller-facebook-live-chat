@@ -1,0 +1,23 @@
+{
+    "lofmp_facebooklivechat_sellerfacebook": {
+        "column": {
+            "sellerfacebook_id": true,
+            "seller_id": true,
+            "page_id": true,
+            "logged_in_greeting": true,
+            "logged_out_greeting": true,
+            "theme_color": true,
+            "created_at": true,
+            "language_code": true,
+            "updated_at": true,
+            "status": true
+        },
+        "index": {
+            "FACEBOOKLIVECHAT_SELLER_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FACEBOOKLIVECHAT_SELLER_ID_SELLER_ID": true
+        }
+    }
+}
