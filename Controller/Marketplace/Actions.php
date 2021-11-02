@@ -118,6 +118,12 @@ abstract class Actions extends \Magento\Framework\App\Action\Action
     protected $_configSection;
 
     /**
+     * require set seller id or not
+     * @var bool|int
+     */
+    protected $_requireSetSellerId = false;
+
+    /**
      * Request id key
      * @var string
      */
@@ -481,19 +487,20 @@ abstract class Actions extends \Magento\Framework\App\Action\Action
         try {
             $params = $this->_paramsHolder ? $request->getParam($this->_paramsHolder) : $request->getParams();
             $params = $this->filterParams($params);
+            if ($params) {
+                $idFieldName = $model->getResource()->getIdFieldName();
+                if (isset($params[$idFieldName]) && empty($params[$idFieldName])) {
+                    unset($params[$idFieldName]);
+                }
+                $model->addData($params);
 
-            $idFieldName = $model->getResource()->getIdFieldName();
-            if (isset($params[$idFieldName]) && empty($params[$idFieldName])) {
-                unset($params[$idFieldName]);
+                $this->_beforeSave($model, $request);
+                $model->save();
+                $this->_afterSave($model, $request);
+
+                $this->messageManager->addSuccess(__('%1 has been saved.', $model->getOwnTitle()));
+                $this->_setFormData(false);
             }
-            $model->addData($params);
-
-            $this->_beforeSave($model, $request);
-            $model->save();
-            $this->_afterSave($model, $request);
-
-            $this->messageManager->addSuccess(__('%1 has been saved.', $model->getOwnTitle()));
-            $this->_setFormData(false);
         } catch (\Magento\Framework\Exception\LocalizedException $e) {
             $this->messageManager->addError(nl2br($e->getMessage()));
             $this->_setFormData($params);
@@ -731,6 +738,13 @@ abstract class Actions extends \Magento\Framework\App\Action\Action
      */
     protected function filterParams($data)
     {
+        if ($this->_requireSetSellerId) {
+            $seller = $this->getCurrentSeller();
+            $data["seller_id"] = $seller ? $seller->getId() : 0;
+            if (!$data["seller_id"]) {
+                return [];
+            }
+        }
         return $data;
     }
 

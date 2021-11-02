@@ -23,5 +23,8 @@ namespace Lofmp\FacebookLiveChat\Controller\Marketplace\Sellerfacebook;
 
 class Save extends \Lofmp\FacebookLiveChat\Controller\Marketplace\Sellerfacebook
 {
-
+    /**
+     * {@inheritdoc}
+     */
+    protected $_requireSetSellerId = true;
 }

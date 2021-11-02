@@ -10,7 +10,6 @@
 	<settings>
 		<buttons>
 			<button name="back" class="Lofmp\FacebookLiveChat\Block\Adminhtml\Sellerfacebook\Edit\BackButton"/>
-			<button name="delete" class="Lofmp\FacebookLiveChat\Block\Adminhtml\Sellerfacebook\Edit\DeleteButton"/>
 			<button name="save" class="Lofmp\FacebookLiveChat\Block\Adminhtml\Sellerfacebook\Edit\SaveButton"/>
 			<button name="save_and_continue" class="Lofmp\FacebookLiveChat\Block\Adminhtml\Sellerfacebook\Edit\SaveAndContinueButton"/>
 		</buttons>
