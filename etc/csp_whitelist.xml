@@ -4,7 +4,7 @@
     <policies>
         <policy id="script-src">
             <values>
-                <value id="lofmp-facebook-live-chat" type="host">www.facebook.com</value>
+                <value id="lofmp-facebook-live-chat" type="host">*.facebook.com</value>
             </values>
         </policy>
     </policies>
