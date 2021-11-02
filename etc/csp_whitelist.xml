@@ -5,10 +5,6 @@
         <policy id="script-src">
             <values>
                 <value id="lofmp-facebook-live-chat" type="host">*.facebook.com</value>
-            </values>
-        </policy>
-        <policy id="script-src">
-            <values>
                 <value id="lofmp-facebook-live-chatscriptnet" type="host">*.facebook.net</value>
             </values>
         </policy>
