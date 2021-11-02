@@ -6,15 +6,14 @@
 				<enabled>1</enabled>
 			</general>
 		</lofmpfacebooklivechat>
-         <csp>
-            <mode>
+        <csp>
+            <policies>
                 <storefront>
-                    <report_uri>http://csp-reporting-service.com/my-project/endpoint</report_uri>
+                    <frame-ancestors>
+                        <inline>0</inline>
+                    </frame-ancestors>
                 </storefront>
-                <admin>
-                    <report_uri>http://csp-reporting-service.com/my-project/endpoint</report_uri>
-                </admin>
-            </mode>
+            </policies>
         </csp>
 	</default>
 </config>
