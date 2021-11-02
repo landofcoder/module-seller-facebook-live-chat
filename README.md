@@ -8,6 +8,8 @@
  - [Specifications](#markdown-header-specifications)
  - [Attributes](#markdown-header-attributes)
 
+* Note: 
+This module is an addon for [Magento 2 Multi-Vendor Marketplace](https://landofcoder.com/magento-2-marketplace-extension.html/)
 
 ## Main Functionalities
 Magento 2 marketplace multi vendor facebook live chat for seller
@@ -37,7 +39,17 @@ Magento 2 marketplace multi vendor facebook live chat for seller
 
 ## Configuration
 
+- Enable module in admin > Stores > Configuration > Landofcoder Extensions > Seller Facebook Live Chat
+- Admin manage seller facebook live chat: Admin > Marketplace > Seller Facebook Live Chat > Facebook Live Chat
+- Seller should Get the seller facebook fanpage id 
+- Seller login on his panel, then go to > Facebook Live Chat > Facebook Chat then input there information:
++ Facebook Page Id: Id of the fanpage
++ Logged In Greeting: Welcome text for logged in user
++ Logged Out Greeting: Welcome text for guest
++ Theme Color: Input hexa color code, example: #44bec7
++ Status: Enable/Disable feature on seller page
 
+- Frontend will show facebook chat box on seller detail page, and seller's product detail page.
 
 
 ## Specifications
