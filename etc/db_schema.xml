@@ -15,8 +15,8 @@
 		<column name="updated_at" nullable="true" xsi:type="timestamp" comment="updated_at" default="CURRENT_TIMESTAMP" on_update="true"/>
 		<column name="status" nullable="true" xsi:type="smallint" comment="status" default="1" identity="false"/>
 
-        <constraint xsi:type="foreign" referenceId="FACEBOOKLIVECHAT_SELLER_ID_SELLER_ID" table="lofmp_facebooklivechat_sellerfacebook"
-                    column="seller_id" referenceTable="lof_marketplace_seller" referenceColumn="seller_id" onDelete="CASCADE"/>
+        <!-- <constraint xsi:type="foreign" referenceId="FACEBOOKLIVECHAT_SELLER_ID_SELLER_ID" table="lofmp_facebooklivechat_sellerfacebook"
+                    column="seller_id" referenceTable="lof_marketplace_seller" referenceColumn="seller_id" onDelete="CASCADE"/> -->
 
         <index referenceId="FACEBOOKLIVECHAT_SELLER_ID" indexType="btree">
             <column name="seller_id"/>

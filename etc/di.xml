@@ -12,7 +12,7 @@
 	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
 		<arguments>
 			<argument name="collections" xsi:type="array">
-				<item name="lofmp_facebooklivechat_sellerfacebook_listing_data_source" xsi:type="string">Lofmp\FacebookLiveChat\Model\ResourceModel\Sellerfacebook\Grid\Collection</item>
+				<item name="facebooklivechat_sellerfacebook_listing_data_source" xsi:type="string">Lofmp\FacebookLiveChat\Model\ResourceModel\Sellerfacebook\Grid\Collection</item>
 			</argument>
 		</arguments>
 	</type>

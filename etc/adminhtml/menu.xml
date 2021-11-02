@@ -10,7 +10,7 @@
             resource="Lofmp_FacebookLiveChat::Sellerfacebook"/>
 		<add
             id="Lofmp_FacebookLiveChat::facebooklivechat"
-            title="Sellerfacebook"
+            title="Facebook Live Chat"
             module="Lofmp_FacebookLiveChat"
             sortOrder="9999"
             resource="Lofmp_FacebookLiveChat::Sellerfacebook"
