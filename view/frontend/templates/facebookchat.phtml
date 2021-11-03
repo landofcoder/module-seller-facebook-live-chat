@@ -7,6 +7,8 @@
 $facebooklive = $block->getFacebookInfo();
 if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
     $helper = $this->helper("Lofmp\FacebookLiveChat\Helper\Data");
+    $fb_version = $helper->getFacebookVersion();
+    $fb_version = $fb_version ? $fb_version : "12.0";
     $themeColor = $facebooklive->getThemeColor();
     $themeColor = $themeColor ? $block->escapeUrl($themeColor) : "#44bec7";
     $loggedInGreeting = $facebooklive->getLoggedInGreeting();
@@ -32,7 +34,7 @@ if ($facebooklive && $facebooklive->getStatus() && $facebooklive->getPageId()) :
     window.fbAsyncInit = function() {
         FB.init({
         xfbml            : true,
-        version          : 'v12.0'
+        version          : 'v<?= $block->escapeHtml($fb_version) ?>'
         });
     };
 

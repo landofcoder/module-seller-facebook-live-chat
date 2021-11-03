@@ -64,6 +64,16 @@ class Data extends AbstractHelper
     }
 
     /**
+     * get facebook widget version
+     *
+     * @return string
+     */
+    public function getFacebookVersion()
+    {
+        return $this->getConfigValue("lofmpfacebooklivechat/general/fb_version");
+    }
+
+    /**
      * is allow seller manage feature
      *
      * @return bool

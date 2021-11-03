@@ -4,6 +4,7 @@
 		<lofmpfacebooklivechat>
 			<general>
 				<enabled>1</enabled>
+                <fb_version>12.0</fb_version>
 			</general>
 		</lofmpfacebooklivechat>
         <csp>
