@@ -10,10 +10,10 @@ namespace Lofmp\FacebookLiveChat\Ui\Component\Listing\Column;
 class SellerfacebookActions extends \Magento\Ui\Component\Listing\Columns\Column
 {
 
-    const URL_PATH_EDIT = 'lofmp_facebooklivechat/sellerfacebook/edit';
+    const URL_PATH_EDIT = 'facebooklivechat/sellerfacebook/edit';
     protected $urlBuilder;
-    const URL_PATH_DELETE = 'lofmp_facebooklivechat/sellerfacebook/delete';
-    const URL_PATH_DETAILS = 'lofmp_facebooklivechat/sellerfacebook/details';
+    const URL_PATH_DELETE = 'facebooklivechat/sellerfacebook/delete';
+    const URL_PATH_DETAILS = 'facebooklivechat/sellerfacebook/details';
 
     /**
      * @param \Magento\Framework\View\Element\UiComponent\ContextInterface $context
@@ -71,7 +71,7 @@ class SellerfacebookActions extends \Magento\Ui\Component\Listing\Columns\Column
                 }
             }
         }
-        
+
         return $dataSource;
     }
 }

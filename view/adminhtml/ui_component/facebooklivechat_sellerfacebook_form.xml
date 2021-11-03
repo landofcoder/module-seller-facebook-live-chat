@@ -40,7 +40,7 @@
 		<settings>
 			<label>General</label>
 		</settings>
-        <field name="status" sortOrder="60" formElement="checkbox">
+        <field name="status" formElement="checkbox">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">Sellerfacebook</item>
@@ -126,21 +126,14 @@
 				</validation>
 			</settings>
 		</field>
-		<field name="theme_color" formElement="input" sortOrder="50">
-			<argument name="data" xsi:type="array">
-				<item name="config" xsi:type="array">
-					<item name="source" xsi:type="string">Sellerfacebook</item>
-                    <item name="additionalInfo" xsi:type="string" translate="true"><![CDATA[Input Hex code as this #44bec7]]></item>
-				</item>
-			</argument>
-			<settings>
-				<dataType>text</dataType>
-				<label translate="true">Theme Color</label>
-				<dataScope>theme_color</dataScope>
-				<validation>
-					<rule name="required-entry" xsi:type="boolean">false</rule>
-				</validation>
-			</settings>
-		</field>
+        <colorPicker name="theme_color" class="Magento\Ui\Component\Form\Element\ColorPicker" component="Magento_Ui/js/form/element/color-picker">
+            <settings>
+                <label translate="true">Theme Color</label>
+                <elementTmpl>ui/form/element/color-picker</elementTmpl>
+                <colorFormat>hex</colorFormat>
+                <colorPickerMode>full</colorPickerMode>
+                <dataScope>theme_color</dataScope>
+            </settings>
+        </colorPicker>
 	</fieldset>
 </form>
