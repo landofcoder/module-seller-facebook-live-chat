@@ -30,7 +30,7 @@ class Sellerfacebook extends Actions
      * Form session key
      * @var string
      */
-    protected $_formSessionKey  = 'lofmpfacebooklivechat_sellerfacebook';
+    protected $_formSessionKey  = 'lofmp_facebooklivechat_sellerfacebook';
 
     /**
      * Allowed Key
