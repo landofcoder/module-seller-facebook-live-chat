@@ -29,11 +29,6 @@ Magento 2 marketplace multi vendor facebook live chat for seller
 
 ### Type 2: Composer
 
- - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
  - Install the module composer by running `composer require landofcoder/module-seller-facebooklivechat`
  - enable the module by running `php bin/magento module:enable Lofmp_FacebookLiveChat`
  - apply database updates by running `php bin/magento setup:upgrade`\*
